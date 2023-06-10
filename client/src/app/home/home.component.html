@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Roboto+Condensed:wght@300&family=Secular+One&display=swap');
+</style>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <div id ="home-view">
+        <div class="home-view" id="container" style="margin-top: 1em;">
+            <div class="home-header">
+                <div id="head">
+                    <img src="../../assets/spotify_logo.png" style="width : 4em; height : 4em;">
+                    <div class="title" id="titleText" >Spotify Playlist Generator</div>
+                    <div id="profile">
+                        <div class="dropdown">
+                            <button id="dropbtn"></button>
+                            <div class="dropdown-content">
+                              <a id="user-status"></a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div id="functionality" class="tools">
+                    <div id="create" class="tools">
+                        <button id="createBtn" type="submit" (click)="createPlaylistView()" class="btn btn-primary btn-sm">Create New Playlist</button>
+                    </div>
+                    <div id="logout" class="tools">
+                        <button id="logoutBtn" type="submit" (click)="logout()" class="btn">Logout</button>
+                    </div>
+                    <div id="search" class="tools">
+                        <label for="search" class="sr-only">Search for a Playlist</label>
+                        <input type="text" class="form-control" name="search" placeholder="search" [(ngModel)]="search">
+                        <button type="submit" (click)="findAPlaylist()" class="btn btn-primary btn-sm">Find Playlist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-view" id="list-games">
+            <table id="all-playlists" style="margin-top: 1em;">
+                <tr id="allTr">
+                    <th>Playlist Name</th>
+                    <th>Playlist Type</th>
+                    <th>Time range of Playlist</th>
+                    <th>Playlist Size</th>
+                    <th>Code</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="create-playlist" id="create-view">
+        <div id="playlist-name">
+            <div id="back-div">
+                <button class="btn btn-danger" id="close-btn"(click)="mainPageView()" style="margin-left:60%;">Back</button>
+            </div>
+            <label for="playlist-name">What is the name of the playlist</label>
+            <input type="text" id="playlist-name-field" name="playlist-name" required size="12">
+        </div>
+        <fieldset id="playlist-type">
+            <legend>What kind of playlist do you want to make.</legend>
+                
+            <div>
+                <label for="personal-playlist">Personal Top Songs</label>
+                <input type="radio" id="personal-playlist" name="playlist-type" (click)="setPlaylistType('personal-playlist')" value="personal-playlist" checked="true">
+            </div>
+
+                        
+            <div>
+                <label for="group-playlist">Group Top Songs</label>
+                <input type="radio" id="group-playlist" name="playlist-type" (click)="setPlaylistType('group-playlist')" value="group-playlist">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Select the range of time you want your playlist to be based on.</legend>
+            
+            <div>
+                <label for="time-range-short">Short</label>
+                <input type="radio" id="time-range-short" name="time-range" (click)="setTimeRange('short_term')" value="short">
+            </div>
+
+            <div>
+                <label for="time-range-medium">Medium</label>
+                <input type="radio" id="time-range-medium" name="time-range" value="medium" (click)="setTimeRange('medium_term')" checked="true">
+            </div>
+            
+            <div>
+                <label for="time-range-long">Long</label>
+                <input type="radio" id="time-range-long" name="time-range" (click)="setTimeRange('long_term')" value="long">
+            </div>
+        </fieldset>
+
+        <div>
+            <label for="playlist-length">How many songs do you want in the playlist.</label>
+            <input type="number" id="playlist-length" name="playlist-length"
+            min="10" max="50" value="25">
+        </div>
+
+        <button id="make-playlist" type="submit" (click)="createPlaylist()" class="btn btn-primary btn-sm">Make Playlist</button>
+    </div>
+
+    <div id="single-playlist-view">
+        <button class="btn btn-danger" id="close-btn"(click)="mainPageView()" style="margin-left:60%;">x</button>
+        <div id="header">
+            <div>Current Playlist - </div>
+            <div id="current-playlist-holder"></div>
+        </div>
+        <div>
+            <div>Add to Spotify</div>
+            <button type="submit" (click)="addToSpotify()" class="btn btn-primary btn-sm">Add</button>
+        </div>
+        <div>
+            <div>Join Playlist</div>
+            <button type="submit" (click)="joinPlaylist()" class="btn btn-primary btn-sm">Join</button>
+        </div>
+
+        <div>
+            <div>Playlist Code:</div>
+            <div id="code"></div>
+        </div>
+        
+        <div id="playlist-contents">
+            <table id="songs-table" style="margin-top: 1em;">
+                <tr>
+                    <th>Album Cover</th>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Artist</th>
+                    <th>Global Popularity</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>

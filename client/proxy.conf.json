@@ -1,0 +1,42 @@
+{
+    "/api" : {
+        "target" : "http://localhost:3000",
+        "secure" : false
+    },
+    "/login" : {
+        "target" : "http://localhost:3000",
+        "secure" : false
+    },
+    "/logout" : {
+        "target" : "http://localhost:3000",
+        "secure" : false
+    },
+    "/api/v1/test" : {
+        "target" : "http://localhost:3000",
+        "secure" : false
+    },
+    "/api/v1/code" : {
+        "target" : "http://localhost:3000",
+        "secure" : false
+    },
+    "/api/v1/users/*" : {
+        "target" : "http://localhost:3000",
+        "secure" : false
+    },
+    "/api/v1/playlists/*" : {
+        "target" : "http://localhost:3000",
+        "secure" : false
+    },
+    "/api/v1/users/*/tracks" : {
+        "target" : "http://localhost:3000",
+        "secure" : false
+    },
+    "/api/v1/users" : {
+        "target" : "http://localhost:3000",
+        "secure" : false
+    },
+    "/api/v1/users/*/properties/*" : {
+        "target" : "http://localhost:3000",
+        "secure" : false
+    }
+}

@@ -1,0 +1,169 @@
+@font-face {
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Secular One', sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Roboto+Condensed:wght@300&family=Secular+One&display=swap");
+}
+
+#head{
+    display:flex;
+    background-color: #252525;
+    padding:2em;
+    width:100%;
+}
+
+#titleText{
+    justify-content: space-between;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight:700;
+    font-size:2em;
+    padding-top:10px;
+    color:#1ED760;
+}
+
+#profile{
+    padding-left:50%;
+    padding-top:30px;
+    font-size: 2em;
+}
+
+#container{
+    display:inline;
+}
+
+.tools{
+    position: relative;
+}
+
+#logout{
+    top:-40px;
+    bottom: 95%;
+    left:95%;
+}
+
+#logoutBtn{
+    color:#1ED760;
+    background-color: #252525;
+    margin: left 80%;
+    width:5em;
+    height:3.5em;
+    border-radius: 5em;
+}
+
+#create{
+    padding-top:1em;
+    padding-left:5em;
+}
+
+#createBtn{
+    color:#1ED760;
+    margin: left 80%;
+    width:8em;
+    height:3.5em;
+    border-radius: 5em;
+    background-color: #252525;
+}
+
+#search{
+    top:-85px;
+    left:35%;
+    width:30%;
+    border-radius: 5em;
+    padding:1em;
+    color:#1ED760;
+    background-color: #252525;
+    border:black 2px solid;
+}
+
+table, th, td{
+    border: #1ED760 3px solid;
+}
+
+td{
+    text-align: center;
+}
+
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+
+/* #allTr > th{
+    
+} */
+
+#dropbtn {
+    background-color: #1ED760;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3e8e41;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+      background-color: #1ED760;
+}
+  
+  .dropdown:hover .dropdown-content {
+      display: block;
+}
+
+  .dropdown:hover #dropbtn {
+      background-color: #3e8e41;
+}
+
+*{
+    font-family:'Secular One';
+}
+
+#playlist-name{
+    display:fixed;
+}
+
+#back-div{
+    padding-right:100%;
+}
+
+#close-btn{
+    color:#1ED760;
+    background-color: #252525;
+    margin: left 80%;
+    width:5em;
+    height:3.5em;
+    border-radius: 5em;
+}
+
+#make-playlist{
+    color:#1ED760;
+    background-color: #252525;
+    margin: left 80%;
+    width:5em;
+    height:3.5em;
+    border-radius: 5em;
+}
+
+table{
+    text-align: center;
+}

@@ -1,0 +1,29 @@
+table, th, td{
+    border: #1ED760 3px solid;
+}
+
+td{
+    text-align: center;
+}
+
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+
+h1{
+    font-family: 'Roboto Condensed';
+    font-weight:700;
+    font-size:2em;
+    padding-top:10px;
+    padding-left:37%;
+}
+
+button{
+    color:#1ED760;
+    background-color: #252525;
+    margin: left 80%;
+    width:5em;
+    height:3.5em;
+    border-radius: 5em;
+}

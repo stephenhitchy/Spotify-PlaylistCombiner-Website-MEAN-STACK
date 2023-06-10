@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Secular One', sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Roboto+Condensed:wght@300&family=Secular+One&display=swap");
+}
+
+.title {
+    margin-left:30%;
+    width: 50%;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 3.25em;
+    padding-top: 10%;
+    padding-bottom: 20px;
+    color:#1ED760;
+}
+
+.container {
+    color:#1ED760;
+    background-color: #252525;
+    border:black 3px solid;
+    width: 37%;
+    margin-left:30%;
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.form-group {
+    padding:1em;
+}
+
+label {
+    padding-left:15%;
+}
+
+input {
+    padding-right:15%;
+    color:#1ED760;
+    background-color: #252525;
+    border-radius: 1em;
+}
+
+button {
+    color:#1ED760;
+    margin-left:40%;
+    width:4em;
+    height:3em;
+    border-radius: 5em;
+    background-color: #252525;
+}
